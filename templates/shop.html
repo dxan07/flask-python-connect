@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+</head>
+<body>
+<h1>Категория товаров</h1>
+{% for category in categories %}
+<ul>
+    <li><a href="{{ url_for('category', category_name=category) }}">{{ category }}</a></li>
+</ul>
+{% endfor %}
+</body>
+</html>
