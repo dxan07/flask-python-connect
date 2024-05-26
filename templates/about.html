@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>About</title>
+    <style>body {
+    font-family: Arial, sans-serif; /* Выбираем шрифт */
+}
+
+ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+li {
+    margin-bottom: 10px; /* Отступ между элементами списка */
+}
+</style>
 </head>
 <body>
     <h1>Сотрудники:</h1>
-    {% for employ in emloyees %}
-<ul>
-    <li>{{ employ }} </li>
-</ul>
+    {% for employee in employees %}
+    <ul>
+        <li>{{ employee }}</li>
+    </ul>
     {% endfor %}
 </body>
 </html>

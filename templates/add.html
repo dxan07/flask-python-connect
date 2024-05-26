@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить товар</title>
+</head>
+<body>
+<h1>Добавьте ваш товар</h1>
+<form method="post">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.name.label}} <br>
+        {{ form.name(size=20) }}
+    </p>
+    <p>
+        {{ form.description.label}} <br>
+        {{ form.description(size=50) }}
+    </p>
+    <p>
+        {{ form.price.label}} <br>
+        {{ form.price(size=20) }}
+    </p>
+    <p>
+        {{ form.submit()}} <br>    </p>
+    <a href="/">Вернуться на гланый экран </a>
+</form>
+</body>
+</html>

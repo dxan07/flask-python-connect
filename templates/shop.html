@@ -2,14 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Shop</title>
+    <title>ShopЧик</title>
+    <style></style>
 </head>
 <body>
-<h1>Категория товаров</h1>
-{% for category in categories %}
+<header>
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fyandex.ru%2Fmaps%2Forg%2Fbarakholka%2F78953624505%2Fpanorama%2F&psig=AOvVaw2JDkZQnWU0W3qLQ-zPgfzp&ust=1716805989535000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCLj-5euOq4YDFQAAAAAdAAAAABAE" alt="Заголовок с изображением"> <!-- Добавляем изображение -->
+        <h1>Борохолка</h1>
+        <nav>
+            <ul>
+                <li><a href="/home">Главный</a></li>
+                <li><a href="/about">о НАс</a></li>
+                <li><a href="/category">Категория товаров</a></li>
+            </ul>
+        </nav>
+    </header>
 <ul>
-    <li><a href="{{ url_for('category', category_name=category) }}">{{ category }}</a></li>
+    {% for product in products %}
+    <li>
+        {{product.name}} - {{product.description}} - {{product.price}}
+    </li>
+    {%endfor%}
+    <a href="/">вернутся на главный экран</a>
 </ul>
-{% endfor %}
 </body>
-</html>
+</html>п
